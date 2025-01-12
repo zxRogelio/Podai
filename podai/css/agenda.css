@@ -1,0 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Contenedor Principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ocupa el espacio disponible para empujar el footer abajo */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #005e2e;
+    color: white;
+    border-bottom: 4px solid #f9d616;
+}
+
+header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1;
+}
+
+header .menu-button {
+    background-color: #f9d616;
+    color: #005e2e;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header .menu-button:hover {
+    background-color: #e4c513;
+    transform: scale(1.05);
+}
+
+/* Títulos */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #005e2e;
+    font-size: 22px;
+}
+
+/* Selección de Materia */
+.materia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.materia label {
+    font-weight: bold;
+    color: #005e2e;
+}
+
+.materia select {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Calendario */
+.calendario {
+    margin: 20px 0;
+}
+
+.calendario table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.calendario th, 
+.calendario td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendario th {
+    background-color: #005e2e;
+    color: white;
+    font-size: 16px;
+}
+
+.calendario td:hover {
+    background-color: #f9d616;
+}
+
+/* Botones de Acción */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botones button {
+    background-color: #005e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botones button:hover {
+    background-color: #003f1e;
+    transform: scale(1.05);
+}
+
+/* Leyenda */
+.leyenda {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.leyenda h3 {
+    margin-bottom: 10px;
+    color: #005e2e;
+    font-size: 18px;
+}
+
+.leyenda ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.leyenda ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #005e2e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 4px solid #f9d616;
+    margin-top: auto;
+}
+
+footer a {
+    color: #f9d616;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    .materia {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .calendario th, .calendario td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Virtual</title>
+    <link rel="stylesheet" href="/podai/css/agenda.css">
+</head>
+<body>
+    <header>
+        <img src="/podai/img/uthhs.png" alt="Logo UTHH">
+        <h1>Universidad Tecnológica de la Huasteca Hidalguense</h1>
+        <nav>
+            <button class="menu-btn">Menú</button>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h2>Agenda Virtual</h2>
+
+        <div class="materia">
+            <label for="materia">Materia:</label>
+            <select id="materia">
+                <option value="">Todas</option>
+                <option value="matematicas">Matemáticas</option>
+                <option value="programacion">Programación</option>
+                <option value="fisica">Física</option>
+
+            </select>
+        </div>
+
+        <div class="calendario">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lu</th>
+                        <th>Ma</th>
+                        <th>Mi</th>
+                        <th>Ju</th>
+                        <th>Vi</th>
+                        <th>Sa</th>
+                        <th>Do</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Primera fila de días -->
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <!-- Segunda fila de días -->
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <!-- Agregar más filas según el mes -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="botones">
+            <button onclick="verAgenda()">Ver Agenda</button>
+            <button onclick="resetear()">Reiniciar</button>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>Carretera Huejutla - Chalchuiyapa S/N, C.P. 43000, Huejutla de Reyes, Hidalgo</p>
+        <p>Teléfonos: <a href="tel:7898962088">789 896 2088</a></p>
+        <p>Email: <a href="mailto:rectoría@uthh.edu.mx">rectoría@uthh.edu.mx</a></p>
+    </footer>
+
+    <script>
+        // Funciones básicas de interacción
+        function verAgenda() {
+            const materia = document.getElementById("materia").value;
+            if (materia) {
+                alert(`Mostrando la agenda para: ${materia}`);
+            } else {
+                alert("Mostrando la agenda para todas las materias.");
+            }
+        }
+
+        function resetear() {
+            document.getElementById("materia").value = "";
+            alert("Selección reiniciada.");
+        }
+    </script>
+</body>
+</html>
